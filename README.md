@@ -3,6 +3,21 @@ About docker-credential-helpers-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/docker-credential-helpers-feedstock/blob/main/LICENSE.txt)
 
+
+About docker-credential-helpers
+-------------------------------
+
+Home: https://github.com/docker/docker-credential-helpers
+
+Package license: MIT
+
+Summary: Docker CLI plugin for extended build capabilities with BuildKit
+
+Development: https://github.com/docker/docker-credential-helpers
+
+About docker-credential-helpers
+-------------------------------
+
 Home: https://github.com/docker/docker-credential-helpers
 
 Package license: MIT
@@ -15,14 +30,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/docker-credential-helpers-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/docker-credential-helpers-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
