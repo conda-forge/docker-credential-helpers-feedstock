@@ -18,11 +18,15 @@ requirements:
     - ${{ stdlib('c') }}
     - ${{ compiler('go-cgo') }}
     - go-licenses
-    - ${{ pkg-config if linux }}
+    - if: linux
+      then: pkg-config
   host:
-    - ${{ glib if linux }}
-    - ${{ zlib if linux }}
-    - ${{ libsecret if linux }}
+    - if: linux
+      then: glib
+    - if: linux
+      then: libsecret
+    - if: linux
+      then: zlib
 
 tests:
   - script:
