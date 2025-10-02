@@ -1,5 +1,5 @@
 context:
-  version: "0.9.3"
+  version: "0.9.4"
 
 package:
   name: docker-credential-helpers
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/docker/docker-credential-helpers/archive/v${{ version }}.tar.gz
-  sha256: 1111c403d50fc26bee310db8bed4fb7d98a43e88850e2ad47403e8f2e9109860
+  sha256: 6cb45cdd1e7f964fb15bc260f55238d90eb365d1d3d4cb7f41418637a9316a6d
 
 build:
   number: 0
@@ -22,12 +22,10 @@ requirements:
       then: pkg-config
   host:
     - if: linux
-      then: glib
-    - if: linux
-      then: libsecret
-    - if: linux
-      then: zlib
-
+      then:
+        - glib
+        - libsecret
+        - zlib
 tests:
   - script:
       - if: osx
@@ -45,10 +43,9 @@ about:
     - LICENSE
     - if: not linux
       then: license-files/
-    - if: linux
-      then: license-files_pass/
-    - if: linux
-      then: license-files_secretservice/
+      else:
+        - license-files_pass/
+        - license-files_secretservice/
   summary: Docker CLI plugin for extended build capabilities with BuildKit
   homepage: https://github.com/docker/docker-credential-helpers
   repository: https://github.com/docker/docker-credential-helpers
