@@ -1,5 +1,5 @@
 context:
-  version: "0.9.11"
+  version: "0.9.12"
 
 package:
   name: docker-credential-helpers
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/docker/docker-credential-helpers/archive/v${{ version }}.tar.gz
-  sha256: 792d27af97abc1703684798871a2a32918228525c0860549c4b80dd00fc53172
+  sha256: 26fe64555610f1cf521628b957f91e811ea64c47182d4dc19261e3aed5a1bea7
 
 build:
   number: 0
